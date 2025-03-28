@@ -22,12 +22,13 @@ def main():
     logger.info("Starting Advanced Python Calculator with REPL...")
 
     # Initialize core components
-    calculator = Calculator()
+    """calculator = Calculator()
     history_manager = HistoryManager()
     plugin_manager = PluginManager(history_manager=history_manager)
-    plugin_manager.load_plugins()
+    plugin_manager.load_plugins()"""
 
     # Register built-in commands
+    """
     commands = {
         "add": AddCommand(calculator, history_manager),
         "subtract": SubtractCommand(calculator, history_manager),
@@ -36,7 +37,15 @@ def main():
     }
     # Merge plugin commands
     commands.update(plugin_manager.get_commands())
-
+"""
+    # Initialize core components
+    history_manager = HistoryManager()
+    plugin_manager = PluginManager(history_manager=history_manager)
+    plugin_manager.load_plugins()  # This will load all plugins from app/plugins/
+    
+    # Now, all calculator operations and other commands (e.g., greet_plugin) are loaded as plugins.
+    commands = plugin_manager.get_commands()
+ 
     print("Advanced Python Calculator")
     print("Type 'menu' to see available commands, or 'exit' to quit.")
 
