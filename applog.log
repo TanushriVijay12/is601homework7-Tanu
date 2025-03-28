@@ -131,3 +131,5 @@ ValueError: Division by zero!
 2025-03-14 14:07:32,402 - root - INFO - GreetPluginCommand: Hello Tanushri, Greetings from the greet plugin!
 2025-03-14 14:08:01,233 - __main__ - DEBUG - Executing command export_csv with operands ['egamplehist.csv']
 2025-03-14 14:08:01,238 - root - INFO - CSVExportCommand: Exported history to egamplehist.csv
+2025-03-28 15:27:09,375 - __main__ - INFO - Starting Advanced Python Calculator with REPL...
+2025-03-28 15:27:16,575 - root - INFO - AddCommand: 66.0 + 77.0 = 143.0
